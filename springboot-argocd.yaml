@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Lakshmansai1999/springboot-helm.git
+    repoURL: https://github.com/Lakshmansai1999/updated-fullstack-jdk21-kubernetes-argocd-heml.git
     targetRevision: master
     path: springboot
 
