@@ -1,0 +1,38 @@
+replicaCount: 2
+
+image:
+  repository: lakshmansai/springboot-app
+  pullPolicy: IfNotPresent
+  tag: "8"
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 8080
+
+database:
+  name: fullstackdb
+  username: postgres
+  port: 5432
+  existingSecret: db-secret
+  existingConfigMap: db-config
+
+postgresql:
+  enabled: true
+  image: postgres:15
+  storageSize: 5Gi
+  storageClass: standard
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
