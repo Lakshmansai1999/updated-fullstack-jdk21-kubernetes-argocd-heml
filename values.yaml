@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: lakshmansai/springboot-app
   pullPolicy: IfNotPresent
-  tag: "10"
+  tag: "11"
 
 service:
   type: NodePort
