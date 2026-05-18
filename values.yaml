@@ -12,7 +12,7 @@ service:
   nodePort: 31839
 
 database:
-  name: fullstackdb
+  name: ems
   username: postgres
   port: 5432
   existingSecret: db-secret
